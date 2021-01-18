@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1595588322 source:c:\users\bapti\desktop\exercice\guest my number\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+

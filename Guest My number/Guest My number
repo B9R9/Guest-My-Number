@@ -1,0 +1,54 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#include<string.h>
+
+
+
+int main ()
+{srand(time(NULL));
+char answer [3];
+char yes[]="yes";
+printf ("                                             Welcome to Guest my Number !\n");
+printf ("In this game, you will try to find a mystery number between 0 and 100.\nThe only tips I can give you is if your number is bigger or smaller then mine.\n");
+printf("You will the one who decide how many time you can ask witch number is it.\n\n");
+printf ("Let's start !\n");
+
+do {
+
+const int min = 1;
+const int max =100;
+int nombreMystere=0,userChoice=0,live;
+
+nombreMystere= (rand()%(max - min+1))+ min ;
+
+/*printf ("%d",nombreMystere);*/
+
+
+printf ("How many question do you need to find the mystery number:");
+
+scanf ("%d",&live);
+
+
+while (live > 0)
+{printf ("What is your number ?");
+scanf ("%d",&userChoice);
+    if (userChoice<nombreMystere)
+    {printf ("Your number is smaller!\n");live--;}
+    else if (userChoice>nombreMystere)
+    {printf("Your number is bigger!\n");live--;}
+    else {printf("Congratulation!!!!\n You find the number.");}
+}
+    if (live==0){printf ("You loose!\nThe number was %d.\n",nombreMystere);}
+
+    printf ("Do you want to play again?\nyes or no:");
+    scanf ("%s",&answer[0]);
+    }
+    while (strcmp(answer,yes)==0 );
+
+    printf ("\nThank you for playing the game! :)");
+
+return 0;
+
+}
